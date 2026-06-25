@@ -136,7 +136,8 @@ Esto se instala **una sola vez por máquina**, no por proyecto, y es un requisit
 | `Dockerfile` | Imagen propia basada en `rust:1-slim-bookworm`, con Node 22 (vía NodeSource), todas las librerías gráficas de Tauri, `tauri-cli` preinstalado. |
 | `docker-compose.yml` | Tres servicios: `dev` (ventana visible, requiere reenvío de display), `build` (genera `.deb`/`.AppImage`, sin necesidad de pantalla), `shell` (consola interactiva). |
 | `docker-start.sh` / `.ps1` / `.bat` | Comando único: detecta si Docker está instalado y corriendo, guía sobre reenvío de pantalla según el sistema operativo. |
-| `.devcontainer/devcontainer.json` | Permite abrir el mismo entorno directamente desde la extensión **Dev Containers** de VS Code, reutilizando el mismo `Dockerfile`/`docker-compose.yml` — sin tener dos definiciones de entorno desincronizadas. |
+| `.devcontainer/devcontainer.json` | Permite abrir el mismo entorno directamente desde la extensión **Dev Containers** de VS Code, reutilizando el mismo `Dockerfile`/`docker-compose.yml` — sin tener dos definiciones de entorno desincronizadas. para correr por que es ecencial xhost +local:docker
+ |
 
 ```mermaid
 sequenceDiagram
